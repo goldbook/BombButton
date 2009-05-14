@@ -9,33 +9,24 @@ import android.widget.Button;
 
 public class BombButton extends Activity {
 	/** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-		
-        //ƒ{ƒ^ƒ“‚ğì‚Á‚Ä•¶š‚ÆƒNƒŠƒbƒN‚Ìˆ—‚ğİ’è
-    	Button bButton = (Button)findViewById(R.id.bButton);
-        
-        /*XML‚Å’è‹`‚¹‚¸ƒvƒƒOƒ‰ƒ€‚Ì’†‚Å‚·‚éê‡
-        Button bButton = new Button(this);
-    	bButton.setText("”š”­‚µ‚ëI");
-    	*/
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 
-        //MediaPlayerƒIƒuƒWƒFƒNƒgmp‚ğì‚Á‚Ä‚¨‚­
-        //finalCü‚µ‚È‚¢‚ÆonClick‚©‚çQÆ‚Å‚«‚È‚¢‚ç‚µ‚¢
-        //R.raw.sound‚Íures/rawv‚É“ü‚ê‚½Waveƒtƒ@ƒCƒ‹B
-        //raw“à‚Ésound‚Æ‚¢‚¤–¼‘O‚Ìwaveƒtƒ@ƒCƒ‹‚ğ’u‚¯‚Î“®‚­‚Í‚¸
-       	final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
-        
-    	//ƒNƒŠƒbƒN‚Ìˆ—‚ğ’è‹`@cf.http://www.javadrive.jp/android/button/index3.html
-       	//ƒo[ƒWƒ‡ƒ“1.0‚ÌSDK‚Å‚Ístart();‚Ì’†‚Éprepare();‚ªŠÜ‚Ü‚ê‚éA‚ç‚µ‚¢@ƒhƒLƒ…ƒƒ“ƒgQÆ
-       	bButton.setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-        		mp.seekTo(0);				//˜A‘Å‘Îô‚Æ‚µ‚Ä”š”­‰¹‚Ì0•b‚É–ß‚·
-        		mp.start();					//”š”­‰¹ƒXƒ^[ƒg
-            }
-        });
-       	
-        }
+		// ãƒœã‚¿ãƒ³ã‚’ä½œã‚‹
+		Button bButton = (Button) findViewById(R.id.bButton);
+
+		//ãƒ¡ãƒ‡ã‚£ã‚¢ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
+		final MediaPlayer mp = MediaPlayer.create(this, R.raw.sound);
+
+		// ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸæ™‚ã®ã‚¤ãƒ™ãƒ³ãƒˆã€€cf.http://www.javadrive.jp/android/button/index3.html
+		bButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				mp.seekTo(0);	//0ç§’ã¸æˆ»ã‚‹ã€‚é€£æ‰“å¯¾ç­–
+				mp.start();		//å†ç”Ÿé–‹å§‹
+			}
+		});
+
+	}
 }
