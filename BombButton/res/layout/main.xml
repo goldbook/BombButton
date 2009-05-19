@@ -16,5 +16,7 @@
 				android:layout_height = "wrap_content"
 				android:text = "爆発しろ！"
 			/>
-	</LinearLayout>
+			
+			
+	</LinearLayout><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="効果音について\n公開サイト\t”The Freesound Project”：http://www.freesound.org/index.php\n題名\tbig_explosion.wav\n作者\tsmcameron\nライセンス\tCreative Commons Sampling Plus 1.0 License" />
 </LinearLayout>

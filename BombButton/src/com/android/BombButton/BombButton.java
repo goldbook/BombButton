@@ -14,7 +14,7 @@ public class BombButton extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		// ボタンを作る
+		// ボタンを作ったりする
 		Button bButton = (Button) findViewById(R.id.bButton);
 
 		//メディアプレイヤー
